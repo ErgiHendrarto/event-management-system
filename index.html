@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Live Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Notice Banner -->
+    <div class="bg-yellow-50 border-b border-yellow-200 p-3">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-yellow-800">
+                <i class="fas fa-info-circle mr-2"></i>
+                <strong>Static Demo Version</strong> - This is a UI showcase. 
+                <a href="https://github.com/YOUR_USERNAME/event-management-system" class="underline font-semibold">View Full Code on GitHub</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">EventHub</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="#events" class="text-gray-700 hover:text-purple-600 font-medium">Browse Events</a>
+                    <a href="#features" class="text-gray-700 hover:text-purple-600 font-medium">Features</a>
+                    <a href="https://github.com/YOUR_USERNAME/event-management-system" target="_blank" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
+                        <i class="fab fa-github mr-2"></i>View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Event Management System
+                </h1>
+                <p class="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                    A full-stack Laravel application for managing events and registrations with QR code ticketing, 
+                    role-based access control, and real-time analytics.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#features" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition">
+                        View Features
+                    </a>
+                    <a href="https://github.com/YOUR_USERNAME/event-management-system" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition">
+                        <i class="fab fa-github mr-2"></i>GitHub Repo
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-6 mt-12 max-w-2xl mx-auto">
+                    <div>
+                        <div class="text-4xl font-bold">Laravel 10</div>
+                        <div class="text-purple-200">Framework</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold">Tailwind CSS</div>
+                        <div class="text-purple-200">Styling</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold">MySQL</div>
+                        <div class="text-purple-200">Database</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Key Features</h2>
+            <p class="text-gray-600 text-lg">Everything you need for event management</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-qrcode text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">QR Code Ticketing</h3>
+                <p class="text-gray-600">Digital tickets with unique QR codes for secure event check-in and validation.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-users-cog text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Role-Based Access</h3>
+                <p class="text-gray-600">Multi-level authentication with Admin and User roles for secure management.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Analytics Dashboard</h3>
+                <p class="text-gray-600">Real-time statistics with charts for events, registrations, and attendance.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-search text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Advanced Search</h3>
+                <p class="text-gray-600">Multiple filters by category, date, location with smart search functionality.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Fully Responsive</h3>
+                <p class="text-gray-600">Mobile-first design that works perfectly on all devices and screen sizes.</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-envelope text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Email Notifications</h3>
+                <p class="text-gray-600">Automated email confirmations, reminders, and updates for registrants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Tech Stack</h2>
+                <p class="text-gray-600 text-lg">Built with modern technologies</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg card-hover">
+                    <i class="fab fa-laravel text-5xl text-red-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">Laravel 10</h3>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg card-hover">
+                    <i class="fab fa-php text-5xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">PHP 8.1+</h3>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg card-hover">
+                    <i class="fas fa-database text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">MySQL</h3>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg card-hover">
+                    <i class="fas fa-wind text-5xl text-cyan-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">Tailwind CSS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Mockup -->
+    <section id="events" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">UI Showcase</h2>
+            <p class="text-gray-600 text-lg">Modern and professional interface design</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-gradient-to-br from-purple-400 to-indigo-600 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <i class="fas fa-home text-6xl mb-4"></i>
+                        <p class="text-xl font-semibold">Homepage</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Landing Page</h3>
+                    <p class="text-gray-600">Hero section with search and featured events</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <i class="fas fa-calendar-alt text-6xl mb-4"></i>
+                        <p class="text-xl font-semibold">Events Listing</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Browse Events</h3>
+                    <p class="text-gray-600">Grid layout with advanced filters</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <i class="fas fa-chart-bar text-6xl mb-4"></i>
+                        <p class="text-xl font-semibold">Dashboard</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Admin Dashboard</h3>
+                    <p class="text-gray-600">Real-time analytics and statistics</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="h-64 bg-gradient-to-br from-pink-400 to-red-600 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <i class="fas fa-ticket-alt text-6xl mb-4"></i>
+                        <p class="text-xl font-semibold">QR Tickets</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Digital Tickets</h3>
+                    <p class="text-gray-600">QR code generation and validation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">View the Full Project</h2>
+            <p class="text-xl text-purple-100 mb-8">
+                Check out the complete source code, documentation, and deployment guides on GitHub
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://github.com/YOUR_USERNAME/event-management-system" target="_blank" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
+                <a href="https://github.com/YOUR_USERNAME/event-management-system/blob/main/README.md" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition">
+                    <i class="fas fa-book mr-2"></i>Read Documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                    <i class="fas fa-calendar-alt text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold">EventHub</span>
+            </div>
+            <p class="text-gray-400 mb-4">Event Management System - Portfolio Project</p>
+            <p class="text-gray-500 text-sm">Built with Laravel, Tailwind CSS & ❤️</p>
+        </div>
+    </footer>
+</body>
+</html>
